@@ -4,10 +4,12 @@ spring:
     password: root
     url: jdbc:mysql://localhost:3306/demotest?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
     driver-class-name: com.mysql.cj.jdbc.Driver
-    mybatis:
-      type-aliases-package: com.example.demotest03.pojo
-      mapper-locations: classpath:mybatis/mapper/*.xml
+  jackson:
+    date-format: yyyy/MM/dd
   thymeleaf:
     prefix:
       classpath: /templates   # 访问template下的html文件需要配置模板，映射
     cache: false # 开发时关闭缓存,不然没法看到实时页面
+mybatis:
+  type-aliases-package: com.example.demotest05.pojo
+  mapper-locations: classpath:mybatis/mapper/*.xml
